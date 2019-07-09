@@ -8,23 +8,14 @@ sh "git clone https://github.com/pknowledge/my-app.git"
 sh "mvn clean -f my-app" 
 }
  } 
-stage('Install') {
- steps {
- sh "mvn install -f my-app" 
-} 
-}
- stage('Test') {
+stage('Test') {
  steps { 
 sh "mvn test -f my-app" 
 } 
 }
- stage('Package') { 
-steps { 
-sh "mvn package -f my-app" } 
-}
- }
 stage('Deploy') { 
 steps { 
 sh "mvn deploy -f my-app" } 
 }
-
+}
+}
