@@ -17,7 +17,7 @@ pipeline {
 		stage ('Deployment Stage') {
             steps {
                 
-                    sh 'cp target/*.jar /opt/tomcat/apache-tomcat-8.5.37/webapps/'
+                   sh 'cp /var/lib/jenkins/workspace/Pipeline_Job/target/*.jar /opt/Tomcat/apache-tomcat-8.5.43/webapps'
             }
         }
     }
